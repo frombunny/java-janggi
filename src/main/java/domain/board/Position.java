@@ -12,7 +12,6 @@ public class Position {
 
     public Position(int x, int y) {
         validateRange(x, y);
-
         this.x = x;
         this.y = y;
     }
@@ -25,6 +24,14 @@ public class Position {
         if (y < MIN_RANGE || y > MIN_HEIGHT_RANGE) {
             throw new IllegalArgumentException("좌표 값이 올바르지 않습니다.");
         }
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     @Override
